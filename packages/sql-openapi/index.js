@@ -56,7 +56,7 @@ async function setupOpenAPI (app, opts) {
     // TODO support ignore
     app.register(entityPlugin, {
       entity,
-      prefix: '/' + entity.pluralName
+      prefix: (opts.prefix || '') + '/' + entity.pluralName
     })
   }
 }
